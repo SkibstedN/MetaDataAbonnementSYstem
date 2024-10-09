@@ -12,7 +12,6 @@
                 {% for user_dataset in user_datasets %}
                     <li><strong>{{ user_dataset.customuser.EMAIL }}</strong> - {{ user_dataset.description }}</li>
                 {% endfor %}
-                <!-- Button to trigger copying -->
                 <button onclick="copyToClipboard('{% for user_dataset in user_datasets %}{{ user_dataset.customuser.EMAIL }}{% if not forloop.last %}, {% endif %}{% endfor %}')">Kopier Emails</button>
             </ul>
         </li>

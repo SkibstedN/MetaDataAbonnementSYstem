@@ -8,7 +8,6 @@
     {% for user, user_datasets in user_dataset_info.items %}
         <li>
             <span style="font-size: 20px;font-weight: 800;"><strong class="user-email">{{ user.EMAIL }}</strong></span>
-            <!-- List of Datasets for each User -->
             {% if user_datasets %}
                 <ul>
                     {% for user_dataset in user_datasets %}
@@ -16,7 +15,6 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            <!-- Delete Form -->
             <form action="{% url 'delete_user' user.USERID %}" method="post" style="display: inline;">
                 {% csrf_token %}
                 <button type="submit" onclick="return confirm('Dette sletter brugeren og alle tilhørende registreringer. Er du sikker på at du vil slette denne bruger?');">Slet Bruger</button>

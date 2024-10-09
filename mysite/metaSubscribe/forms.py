@@ -30,8 +30,7 @@ class RegisterDatasetForm(forms.ModelForm):
             'oninput': "this.setCustomValidity('')"
         })
     )
-    dataset = forms.ModelChoiceField(queryset=Dataset.objects.none())  # Initialize with no queryset
-
+    dataset = forms.ModelChoiceField(queryset=Dataset.objects.none())  
     class Meta:
         model = UserDataset
         fields = ['dataset', 'description']

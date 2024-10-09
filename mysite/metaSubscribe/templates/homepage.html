@@ -5,7 +5,7 @@
 <h3>Log ind eller Registrer Bruger</h3>
 <form method="post">
     {% csrf_token %}
-    {{ user_form.as_p }}  <!-- Change to user_form -->
+    {{ user_form.as_p }}  
     <button type="submit" name="user_login">Log ind/Registrer</button>  
 </form>
 
@@ -17,11 +17,10 @@
   </ul>
 {% endif %}
 
-<!-- Admin Login Form Here -->
 <h3>Admin</h3>
 <form method="post">
     {% csrf_token %}
-    {{ admin_form.as_p }}  <!-- Change to admin_form -->
+    {{ admin_form.as_p }}  
     <button type="submit" name="admin_login">Log ind</button>  
 </form>
 
